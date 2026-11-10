@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ely Kitties — Whitelist</title>
+<meta name="description" content="Apply for the Ely Kitties whitelist. 2,222 fully on-chain kitties on Elysium.">
+<meta property="og:title" content="Ely Kitties — Whitelist">
+<meta property="og:description" content="2,222 fully on-chain kitties on Elysium. Apply for the whitelist.">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/pfp.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+<body>
+<div class="glow"></div>
+
+<header class="nav">
+  <a class="brand" href="#top"><img src="assets/img/pfp.png" alt=""><span>ELY KITTIES</span></a>
+  <nav><a href="#how">How it works</a><a href="#apply">Apply</a></nav>
+  <a class="btn ghost" id="navX" href="#" target="_blank" rel="noopener">Follow on X</a>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="copy">
+      <p class="eyebrow"><span class="dot"></span> Whitelist open</p>
+      <h1>Enter the<br><em>Elysian fields.</em></h1>
+      <p class="lede">2,222 pixel kitties, drawn entirely on-chain on Elysium.
+        Apply below to secure your spot before the gates open.</p>
+      <div class="cta">
+        <a class="btn primary" href="#apply">Apply for whitelist</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Supply</dt><dd id="stSupply">2,222</dd></div>
+        <div><dt>Chain</dt><dd>Elysium</dd></div>
+        <div><dt>Art</dt><dd>On-chain</dd></div>
+      </dl>
+    </div>
+    <div class="portal">
+      <div class="ring"></div>
+      <img id="heroKitty" src="assets/img/k/1.png" alt="Ely Kitty">
+      <span class="tag">Ely Kitty <b id="heroNo">#1</b></span>
+    </div>
+  </section>
+
+  <section class="rail" aria-hidden="true"><div class="rail-track" id="rail"></div></section>
+
+  <section class="how wrap" id="how">
+    <h2>Three steps to the fields.</h2>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>Complete the tasks</h3><p>Follow, like and repost, and reply with your wallet on X.</p></div>
+      <div class="step"><b>02</b><h3>Submit your entry</h3><p>Your X handle, your EVM wallet, and the link to your reply.</p></div>
+      <div class="step"><b>03</b><h3>Get your Elysian Pass</h3><p>Download your pass, share it, and bring friends with your referral link.</p></div>
+    </div>
+  </section>
+
+  <section class="apply wrap" id="apply">
+    <div class="head">
+      <h2>Whitelist application</h2>
+      <p class="sub">One entry per wallet. Use an EVM wallet you control (Rabby or MetaMask).</p>
+    </div>
+
+    <div class="form-card" id="formCard">
+      <ol class="tasks">
+        <li class="task" data-task="follow"><span class="chk"></span>
+          <div><h4>Follow <span class="xh">@ElyKitties</span></h4><p>Stay close for mint news.</p></div>
+          <a class="btn sm" id="tFollow" target="_blank" rel="noopener">Follow</a></li>
+        <li class="task" data-task="like"><span class="chk"></span>
+          <div><h4>Like &amp; repost</h4><p>The intro post.</p></div>
+          <a class="btn sm" id="tLike" target="_blank" rel="noopener">Open post</a></li>
+        <li class="task" data-task="reply"><span class="chk"></span>
+          <div><h4>Reply with your wallet</h4><p>Then copy your reply's link.</p></div>
+          <a class="btn sm" id="tReply" target="_blank" rel="noopener">Reply</a></li>
+      </ol>
+
+      <form id="wlForm" novalidate>
+        <label class="field"><span>X handle</span>
+          <div class="inp"><b>@</b><input id="fHandle" placeholder="yourhandle" autocomplete="off" maxlength="15"></div></label>
+        <label class="field"><span>EVM wallet</span>
+          <div class="inp"><input id="fWallet" placeholder="0x…" autocomplete="off" spellcheck="false"></div></label>
+        <label class="field"><span>Reply link</span>
+          <div class="inp"><input id="fReply" placeholder="https://x.com/you/status/…" autocomplete="off"></div></label>
+        <div class="ref-line" id="refLine" hidden>Invited by <b id="refCode"></b></div>
+        <p class="err" id="formErr" role="alert"></p>
+        <button class="btn primary wide" type="submit" id="submitBtn">Submit application</button>
+      </form>
+    </div>
+
+    <div class="result" id="result" hidden>
+      <h3>You're in line, <span id="rHandle"></span>. 🌿</h3>
+      <div class="card-frame"><canvas id="card" width="1200" height="675"></canvas></div>
+      <div class="actions">
+        <button class="btn primary" id="btnDownload">Download pass</button>
+        <button class="btn ghost" id="btnShare">Share on X</button>
+        <button class="btn ghost" id="btnCopy">Copy referral link</button>
+      </div>
+      <div class="meta">
+        <div><small>Your code</small><strong id="rCode">EK-XXXXXX</strong></div>
+        <div><small>Position</small><strong id="rQueue">#—</strong></div>
+        <div><small>Referrals</small><strong id="rRefs">0</strong></div>
+        <div class="pips" id="pips"></div>
+      </div>
+      <button class="link-btn" id="btnEdit">Edit my application</button>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© Ely Kitties · built on Elysium</span>
+  <a id="footX" href="#" target="_blank" rel="noopener">@ElyKitties</a>
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="assets/js/config.js?v=1"></script>
+<script src="assets/js/app.js?v=1"></script>
+</body>
+</html>
