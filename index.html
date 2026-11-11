@@ -1,121 +1,133 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ely Kitties — Whitelist</title>
-<meta name="description" content="Apply for the Ely Kitties whitelist. 2,222 fully on-chain kitties on Elysium.">
-<meta property="og:title" content="Ely Kitties — Whitelist">
-<meta property="og:description" content="2,222 fully on-chain kitties on Elysium. Apply for the whitelist.">
-<meta property="og:image" content="https://elykitties.xyz/assets/img/og.png">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="assets/img/pfp.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mint — Ely Kitties</title>
+  <meta name="description" content="Mint Ely Kitties. 2,222 pixel kitties, drawn entirely on-chain on Elysium.">
+  <meta name="theme-color" content="#071716">
+  <meta property="og:title" content="Mint — Ely Kitties">
+  <meta property="og:image" content="https://elykitties.xyz/assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="style.css?v=1794406805">
 </head>
 <body>
-<div class="glow"></div>
-
-<header class="nav">
-  <a class="brand" href="#top"><img src="assets/img/pfp.png" alt=""><span>ELY KITTIES</span></a>
-  <nav><a href="#how">How it works</a><a href="#apply">Apply</a></nav>
-  <a class="btn ghost" id="navX" href="#" target="_blank" rel="noopener">Follow on X</a>
-</header>
-
-<main id="top">
-  <section class="hero wrap">
-    <div class="copy">
-      <p class="eyebrow"><span class="dot"></span> Whitelist open</p>
-      <h1>Enter the<br><em>Elysian fields.</em></h1>
-      <p class="lede">2,222 pixel kitties, drawn entirely on-chain on Elysium.
-        Apply below to secure your spot before the gates open.</p>
-      <div class="cta">
-        <a class="btn primary" href="#apply">Apply for whitelist</a>
-        <a class="btn ghost" href="#how">How it works</a>
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="./"><img class="px" src="assets/img/pfp.png" alt="">ELY <b>KITTIES</b></a>
+      <div class="nav-links">
+        <a class="nav-link" id="wlLink" target="_blank" rel="noopener">Whitelist ↗</a>
+        <span class="net" id="netPill"><i></i><span id="netName">—</span></span>
+        <a class="icon-btn" id="xLink" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <div class="wallet-wrap">
+          <button class="btn sm" id="connectBtn">Connect wallet</button>
+          <div class="picker" id="picker" hidden></div>
+        </div>
       </div>
-      <dl class="stats">
-        <div><dt>Supply</dt><dd id="stSupply">2,222</dd></div>
-        <div><dt>Chain</dt><dd>Elysium</dd></div>
-        <div><dt>Art</dt><dd>On-chain</dd></div>
-      </dl>
     </div>
-    <div class="portal">
-      <div class="ring"></div>
-      <img id="heroKitty" src="assets/img/k/1.png" alt="Ely Kitty">
-      <span class="tag">Ely Kitty <b id="heroNo">#1</b></span>
-    </div>
-  </section>
+  </nav>
 
-  <section class="rail" aria-hidden="true"><div class="rail-track" id="rail"></div></section>
+  <main class="pad">
+    <div class="wrap launch">
+      <!-- art stage -->
+      <section class="stage">
+        <div class="frame">
+          <div class="frame-top"><span>GENESIS · ON-CHAIN</span><span id="stageNo">01 / 10</span></div>
+          <div class="art" id="stageArt"><img class="px" id="stageImg" src="assets/img/k/1.png" alt="Ely Kitty"></div>
+          <div class="frame-bot"><span id="stageName">ELY KITTY</span><span class="chev">»»</span></div>
+        </div>
+        <div class="thumbs" id="thumbs"></div>
+      </section>
 
-  <section class="how wrap" id="how">
-    <h2>Three steps to the fields.</h2>
-    <div class="steps">
-      <div class="step"><b>01</b><h3>Complete the tasks</h3><p>Follow, like and repost, and reply with your wallet on X.</p></div>
-      <div class="step"><b>02</b><h3>Submit your entry</h3><p>Your X handle, your EVM wallet, and the link to your reply.</p></div>
-      <div class="step"><b>03</b><h3>Get your Elysian Pass</h3><p>Download your pass, share it, and bring friends with your referral link.</p></div>
-    </div>
-  </section>
+      <!-- mint console -->
+      <section class="console" aria-live="polite">
+        <p class="kicker idle" id="kicker"><i class="dot"></i><span id="liveLabel">Loading sale…</span></p>
+        <h1 id="title">ELY KITTIES</h1>
+        <p class="sub"><span id="tagline">2,222 pixel kitties on Elysium.</span> <a id="contractLink" target="_blank" rel="noopener"></a></p>
 
-  <section class="apply wrap" id="apply">
-    <div class="head">
-      <h2>Whitelist application</h2>
-      <p class="sub">One entry per wallet. Use an EVM wallet you control (Rabby or MetaMask).</p>
-    </div>
+        <div class="rows">
+          <div class="row"><span>Price</span><b id="price">—</b></div>
+          <div class="row"><span>Minted</span><b id="minted">— / —</b></div>
+        </div>
+        <div class="meter"><i id="meterFill"></i></div>
 
-    <div class="form-card" id="formCard">
-      <ol class="tasks">
-        <li class="task" data-task="follow"><span class="chk"></span>
-          <div><h4>Follow <span class="xh">@ElyKitties</span></h4><p>Stay close for mint news.</p></div>
-          <a class="btn sm" id="tFollow" target="_blank" rel="noopener">Follow</a></li>
-        <li class="task" data-task="like"><span class="chk"></span>
-          <div><h4>Like &amp; repost</h4><p>The intro post.</p></div>
-          <a class="btn sm" id="tLike" target="_blank" rel="noopener">Open post</a></li>
-        <li class="task" data-task="reply"><span class="chk"></span>
-          <div><h4>Reply with your wallet</h4><p>Then copy your reply's link.</p></div>
-          <a class="btn sm" id="tReply" target="_blank" rel="noopener">Reply</a></li>
-      </ol>
+        <div class="elig" id="elig"></div>
 
-      <form id="wlForm" novalidate>
-        <label class="field"><span>X handle</span>
-          <div class="inp"><b>@</b><input id="fHandle" placeholder="yourhandle" autocomplete="off" maxlength="15"></div></label>
-        <label class="field"><span>EVM wallet</span>
-          <div class="inp"><input id="fWallet" placeholder="0x…" autocomplete="off" spellcheck="false"></div></label>
-        <label class="field"><span>Reply link</span>
-          <div class="inp"><input id="fReply" placeholder="https://x.com/you/status/…" autocomplete="off"></div></label>
-        <div class="ref-line" id="refLine" hidden>Invited by <b id="refCode"></b></div>
-        <p class="err" id="formErr" role="alert"></p>
-        <button class="btn primary wide" type="submit" id="submitBtn">Submit application</button>
-      </form>
+        <button class="btn mint-btn" id="mintBtn" disabled>Connect to Mint</button>
+        <p class="status" id="note"></p>
+        <p class="fine">One click mints as many kitties as your balance covers, keeping a little <span class="cur">USDC</span> back for gas.</p>
+      </section>
     </div>
 
-    <div class="result" id="result" hidden>
-      <h3>You're in line, <span id="rHandle"></span>. 🌿</h3>
-      <div class="card-frame"><canvas id="card" width="1200" height="675"></canvas></div>
-      <div class="actions">
-        <button class="btn primary" id="btnDownload">Download pass</button>
-        <button class="btn ghost" id="btnShare">Share on X</button>
-        <button class="btn ghost" id="btnCopy">Copy referral link</button>
+    <section class="wrap mine" id="mine" hidden>
+      <div class="mine-head">
+        <h2>Your kitties</h2>
+        <span class="small">Rendered straight from the contract — no IPFS, no server</span>
       </div>
-      <div class="meta">
-        <div><small>Your code</small><strong id="rCode">EK-XXXXXX</strong></div>
-        <div><small>Position</small><strong id="rQueue">#—</strong></div>
-        <div><small>Referrals</small><strong id="rRefs">0</strong></div>
-        <div class="pips" id="pips"></div>
-      </div>
-      <button class="link-btn" id="btnEdit">Edit my application</button>
+      <div class="mine-grid" id="mineGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr"></span> Ely Kitties · Only mint from this page.</span>
+      <span id="footNet"></span>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer class="wrap">
-  <span>© Ely Kitties · built on Elysium</span>
-  <a id="footX" href="#" target="_blank" rel="noopener">@ElyKitties</a>
-</footer>
-<div class="toast" id="toast"></div>
+  <!-- owner-only: appears when the connected wallet owns the contract -->
+  <button class="admin-fab" id="adminBtn" hidden>⚙ Admin</button>
+  <div class="asheet" id="asheet" hidden>
+    <div class="abox" role="dialog" aria-label="Admin panel">
+      <div class="ahead">
+        <div class="atitle">⚙ Admin panel</div>
+        <button class="aclose" id="aclose" aria-label="Close">✕</button>
+      </div>
+      <p class="asub">Owner-only. Every change is a transaction you sign in your wallet.</p>
 
-<script src="assets/js/config.js?v=2"></script>
-<script src="assets/js/app.js?v=2"></script>
+      <div class="agrid">
+        <div class="acard">
+          <div class="alabel">Sale status</div>
+          <div class="astate" id="aSaleState">—</div>
+          <button class="abtn" data-act="toggleSale">Toggle sale</button>
+        </div>
+        <div class="acard">
+          <div class="alabel">Mint price (<span class="cur">USDC</span>) · 0 = free</div>
+          <input class="ain" id="aPrice" type="number" step="0.001" min="0" placeholder="0.007">
+          <button class="abtn" data-act="setPrice">Set price</button>
+        </div>
+        <div class="acard">
+          <div class="alabel">Max supply</div>
+          <input class="ain" id="aSupply" type="number" min="1" step="1" placeholder="2222">
+          <button class="abtn" data-act="setSupply">Set supply</button>
+        </div>
+        <div class="acard">
+          <div class="alabel">Max per tx · 0 = unlimited</div>
+          <input class="ain" id="aPerTx" type="number" min="0" step="1" placeholder="0">
+          <button class="abtn" data-act="setPerTx">Set max/tx</button>
+        </div>
+        <div class="acard">
+          <div class="alabel">Withdraw balance</div>
+          <div class="astate" id="aBalState">—</div>
+          <button class="abtn" data-act="withdraw">Withdraw to owner</button>
+        </div>
+        <div class="acard wide">
+          <div class="alabel">Owner mint (giveaway / team — no payment)</div>
+          <div class="arow2">
+            <input class="ain" id="aMintTo" type="text" placeholder="0x recipient address">
+            <input class="ain qty" id="aMintQty" type="number" min="1" step="1" placeholder="qty">
+          </div>
+          <button class="abtn" data-act="ownerMint">Mint to address</button>
+        </div>
+      </div>
+      <div class="anote" id="aNote"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.13.2/ethers.umd.min.js"></script>
+  <script src="config.js?v=1794406805"></script>
+  <script src="app.js?v=1794406805"></script>
 </body>
 </html>
